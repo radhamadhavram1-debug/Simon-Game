@@ -29,7 +29,7 @@ function levelUp() {
     scoreText.innerText = `Level ${level}`;
     let randIdx = Math.floor((Math.random() * 4) + 1);
     let randClass = `box${randIdx}`;
-    console.log(randClass);
+   // console.log(randClass);
 
     let btn = document.querySelector(`.${randClass}`);
 
@@ -68,8 +68,8 @@ function check(idx) {
     }
     else {
         let hScore = highestScore(level - 1);
-        console.log(hScore);
-        scoreText.innerHTML = `Game Over! Your score is <b>${level - 1} </b> <br> <b> Highest score is ${hScore} </b><br> Press any key to start a new game`;
+       // console.log(hScore);
+        scoreText.innerHTML = `Game Over! <br>Your score is <b>${level - 1} </b> <br> Highest score is <b> ${hScore} </b><br> Press any key to start a new game`;
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(() => {
             document.querySelector("body").style.backgroundColor = "#308695";
@@ -81,7 +81,7 @@ function check(idx) {
 
 
 function btnPress() {
-    console.log(this);
+    //console.log(this);
     let btn = this;
     boxFlash(btn);
     let userId = btn.getAttribute("id");
